@@ -1,0 +1,9 @@
+[SHARED_LIB]
+libgdbc-filemaker.so
+
+[HEADER]
+libgdbc-filemaker.h
+graal_isolate.h
+libgdbc-filemaker_dynamic.h
+graal_isolate_dynamic.h
+

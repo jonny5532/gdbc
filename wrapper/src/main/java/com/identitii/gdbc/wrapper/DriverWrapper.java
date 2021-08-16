@@ -5,6 +5,7 @@ import static com.identitii.gdbc.wrapper.Util.j;
 import static com.identitii.gdbc.wrapper.Util.nullj;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -471,6 +472,27 @@ public class DriverWrapper {
 			return -1;
 		}
 	}
+
+	@CEntryPoint(name = "setDate")
+	public static CCharPointer setDate(IsolateThread thread, int statement, int index, long value) {
+		try {
+			statements.get(statement).setDate(index, new Date(value));
+			return c(null);
+		} catch (Throwable e) {
+			return toError(e);
+		}
+	}
+	
+	@CEntryPoint(name = "getDate")
+	public static long getDate(IsolateThread thread, int statement, int index) {
+		try {
+			return resultSets.get(statement).getDate(index).getTime();
+		} catch (Throwable e) {
+			setError(e);
+			return -1;
+		}
+	}
+
 
 	@CEntryPoint(name = "setNull")
 	public static CCharPointer setNull(IsolateThread thread, int statement, int index) {

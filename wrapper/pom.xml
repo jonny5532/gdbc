@@ -73,11 +73,18 @@
 		</dependency>
 		
 		<dependency>
-		    <groupId>com.oracle</groupId>
-		    <artifactId>ojdbc6</artifactId>
-		    <version>12.1.0.1-atlassian-hosted</version>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>12.1.0.2.0</version>
 		    <scope>compile</scope>
 			<optional>true</optional> <!-- To allow us to compile the oracle only extensions, but not include the jar unless it is the oracle driver -->
+		</dependency>
+
+		<dependency>
+			<groupId>com.filemaker</groupId>
+			<artifactId>jdbc</artifactId>
+			<version>20.65</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
@@ -173,8 +180,8 @@
 	 -->
 	<repositories>
 		<repository>
-			<id>spring</id>
-			<url>http://repo.spring.io/plugins-release/</url>
+			<id>icm</id>
+			<url>http://maven.icm.edu.pl/artifactory/repo/</url>
 		</repository>
 	</repositories>
 

@@ -1,0 +1,13 @@
+[
+    {
+        "name": "com.filemaker.jdbc3.J3Connection",
+        "allDeclaredClasses": true,
+        "allDeclaredConstructors": true,
+        "allDeclaredFields" : true,
+        "allDeclaredMethods": true,
+        "allPublicClasses": true,
+        "allPublicConstructors": true,
+        "allPublicMethods": true,
+        "allPublicFields": true
+    }
+]
